@@ -48,42 +48,16 @@
 <body>
     <div class="container">
         <div id="userscontainer" class="userscontainer">
-            <h3>Usuários</h3>
+            <h4>Perfil</h1>
             <div class="col-md-12">
-                <div id="master" class="master">
+                <div id="perfil" class="perfil">
                 </div>
             </div>
-        </div>
-
-        <div id="newcomment" class="newcomment">
-            <div class="chat_window">
-                <div class="bottom_wrapper clearfix">
-                    <div class="message_input_wrapper">
-                      <input class="message_input" placeholder="Criar um novo post" />
-                    </div>
-                    <div id="send_message" class="send_message">
-                      <div class="icon"></div>
-                      <div class="text">
-                        Enviar
-                      </div>
-                    </div>
-                </div>
-                <ul class="messages"></ul>
-              </div>
-              <div class="message_template">
-                <li class="message">
-                  <div class="avatar"></div>
-                  <div id="name">Valéria</div>
-                  <div class="text_wrapper">
-                    <div class="text"></div>
-                  </div>
-                </li>
-              </div>
-
         </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/jwt-js-decode.pkg.min.js"></script>
-    <script script type="text/javascript" src="/chat.js"></script>
+    <script src="//unpkg.com/jwt-js-decode@1.5.1/dist/jwt-js-decode.pkg.min.js"></script>
+    <script script type="text/javascript" src="/perfil.js"></script>
 </body>
 </html>

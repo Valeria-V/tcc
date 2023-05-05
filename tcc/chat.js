@@ -101,11 +101,9 @@ fetch("https://tcc-production.up.railway.app/api/starvingless/user/v1/list", req
         fetch(userDetailsUrl, requestOptions)
           .then(response => response.json())
           .then(userData => {
-            // Abre uma nova aba com os dados do usuário
-            const userTab = window.open('', '_blank');
-            userTab.document.write(`<h1>${userData.FirstName} ${userData.LastName}</h1>`);
-            userTab.document.write(`<p>Email: ${userData.Email}</p>`);
-            userTab.document.write(`<p>Telefone: ${userData.PhoneNumber}</p>`);
+            // Abre a aba de perfil e salva o usuário clicado
+            const userTab = window.open('/perfil.html', '_self');
+            localStorage.setItem("perfil", userDetailsUrl);
           })
           .catch(error => console.error(error));
       });
