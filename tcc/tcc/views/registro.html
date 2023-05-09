@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="/css/login.css" media="screen" />
+
+<body>
+    <div class="login-page">
+        <div class="form">
+          <form id="registerform" class="registerform">
+              <input id="firstname" class="message_input" placeholder="Nome" maxlength="50" /><!--editar FirstName-->
+              <input id="lastname" class="message_input" placeholder="Sobrenome" /><!--editar LastName-->
+              <input id="cpf" class="message_input" placeholder="CPF" /><!--editar LastName-->
+              <input id="address" class="message_input" placeholder="Endereço" /><!--editar LastName-->
+              <input id="password" class="message_input" placeholder="Senha" /><!--editar LastName-->
+              <input id="email" class="message_input" placeholder="E-mail" /><!--editar LastName-->
+              <input id="phone" class="message_input" placeholder="Telefone" /><!--editar LastName-->
+              <div class="text" title="Atualizar"><i class="bi bi-send"></i></div><!--Phone-->
+            <button id="submit" class="primary">CADASTRAR</button>
+            <p class="message">Já está cadastrado? <a href="/index.html">Login</a></p>
+          </form>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="//unpkg.com/jwt-js-decode@1.5.1/dist/jwt-js-decode.pkg.min.js"></script>
+      <script script type="text/javascript" src="/js/valida_registro.js"></script>
+</body>
+</html>
