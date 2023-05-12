@@ -40,7 +40,7 @@
           `;
         usersContainer.innerHTML = usersHTML;
 
-                // Exibir ícone de excluir post apenas para usuário com id = 1
+        // Exibir ícone de excluir post apenas para usuário com id = 1
         if (user_id == 1 || user_id == data.Id){
           $("#editarperfil").addClass("visivel").removeClass("invisivel");
         }

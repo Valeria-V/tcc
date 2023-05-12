@@ -25,7 +25,7 @@
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        // montar lista de usuários
+        // montar lista de comentários
         const usersContainer = document.getElementById("comments");
         let usersHTML = '';
         usersHTML += `
@@ -43,13 +43,13 @@
         `;
         usersContainer.innerHTML = usersHTML;
 
-        // Exibir ícone de excluir post apenas para usuário com id = 1
+        // Exibir ícone de excluir post apenas para usuário com id = 1 ou criador do comentário
         if (user_id == 1){
           $("#deletarcomment").addClass("visivel").removeClass("invisivel");
           $("#editarcomentario").addClass("visivel").removeClass("invisivel");
         }
 
-        // DELETAR POST
+        // DELETAR COMENTÁRIO
         var excluirPost = document.getElementById("deletarcomment");
         var textExcluir = "Deseja excluir o post";
         $(excluirPost).on('click', function() {
@@ -78,7 +78,7 @@
           }
         });
 
-        // ATUALIZAR POST
+        // ATUALIZAR COMENTÁRIO
         $('.send_message').on('click', function() {
           // Pega valores do login e seta nas variáveis
           var id = document.getElementById("postselecionado").getAttribute('data-id-comment');
@@ -99,7 +99,7 @@
           var createDate = date.toLocaleDateString("pt", optionsdate);
           var threadOpen = true;
 
-          // Cria um objeto com as informações de login
+          // Cria um objeto com as informações
           const envioPost = {
             description: description,
             createDate: createDate,

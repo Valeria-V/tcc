@@ -25,12 +25,12 @@
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        // montar lista de usuários
+        // montar lista de POSTS
         const usersContainer = document.getElementById("post");
         let usersHTML = '';
         usersHTML += `
             <div id="deletarpost" class="deletarpost invisivel" title="EXCLUIR POST"><i class="bi bi-trash3"></i></div>
-            <li class="postselecionado message appeared" id="postselecionado" data-user-post="${data.id}">
+            <li class="postselecionado message appeared" id="postselecionado" data-post-id="" data-user-post="${data.id}">
                 <div>
                     <div class="avatar"></div>
                     <div class="name-chat">${data.firstName}</div>
@@ -43,10 +43,10 @@
         `;
         usersContainer.innerHTML = usersHTML;
 
-        // Exibir ícone de excluir post apenas para usuário com id = 1
+        // Exibir ícone de EXCLUIR / EDITAR post apenas para usuário com id = 1 
         if (user_id == 1){
-          $("#deletarpost").addClass("visivel").removeClass("invisivel");
           $("#editarpost").addClass("visivel").removeClass("invisivel");
+          $("#deletarpost").addClass("visivel").removeClass("invisivel");
         }
 
         // DELETAR POST
@@ -99,7 +99,7 @@
           var createDate = date.toLocaleDateString("pt", optionsdate);
           var threadOpen = true;
 
-          // Cria um objeto com as informações de login
+          // Cria um objeto com as informações
           const envioPost = {
             id: id,
             title: title,

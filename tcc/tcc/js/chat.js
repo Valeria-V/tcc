@@ -76,7 +76,7 @@
                 <div class="data-chat">${post[i].createDate}</div>
               </div>
               <div class="text_wrapper">
-                <div class="text">${post[i].title} <br> ${post[i].description}</div>
+                <div class="text"><span class="titlepost">${post[i].title}</span> <br><span>${post[i].description}</span></div>
               </div>
             </li>
           `;
@@ -129,10 +129,8 @@
           const envioPost = {
             title: title,
             description: description,
-            imageUrl: imageUrl,
             createDate: createDate,
             threadOpen: threadOpen,
-            numberOfComments: null,
             userId: user_id
           };
 

@@ -48,7 +48,7 @@ function Registro() {
     month: "numeric",
     day: "numeric"
     };
-    var createDate = date.toLocaleDateString("pt", optionsdate);
+    var SignUpDate = date.toLocaleDateString("pt", optionsdate);
 
     // Cria um objeto com as informações de login
     const loginData = {
@@ -59,7 +59,7 @@ function Registro() {
         Password: Password,
         email: email,
         Phone: Phone,
-        SignUpDate: createDate
+        SignUpDate: SignUpDate
     };
     
     // Envia a requisição POST com o corpo da mensagem
@@ -73,21 +73,11 @@ function Registro() {
     .then(response => {
         // Trata a resposta da API
         if (response.ok) {
-            // Se a resposta for bem sucedida, verifica se o token de acesso é retornado
-            response.json().then(data => {
-                if (data.token) {
-                    // Se o token de acesso for retornado, armazena-o em algum lugar para uso posterior
-                    localStorage.setItem("token", data.token);
-                    localStorage.setItem("id"   , data.Id);
-                    localStorage.setItem("name" , data.FirstName + ' ' + data.LastName);
-                    console.log("Usuário criado");
-                    console.log("Login bem sucedido");
-                    console.log(response);
-                    window.location.href = "/views/home.html";
-                } else {
-                    console.log("Erro ao fazer login");
-                }
-            });
+                // Se o token de acesso for retornado, armazena-o em algum lugar para uso posterior
+                alert("Registro realizado com SUCESSO realize o LOGIN");
+                setTimeout(() => {
+                    window.location.href = "/index.html";
+                  }, "5000");
         } else {
             console.log("Erro ao fazer login");
         }
